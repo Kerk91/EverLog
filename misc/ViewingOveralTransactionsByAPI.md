@@ -8,11 +8,7 @@ Follow these steps to view all transactions made using your API key:
 
 Ensure you are using your own generated API key. If you are using the free "try-it-out" key, you will not be able to filter or have an overview of all your transactions since others may also be using the same key.
 
-### **Generate Your API Key**
-1. Head over to [Stability Protocol API Dashboard](https://portal.stabilityprotocol.com/keys/).
-2. Generate and use your personal API key.
 
----
 
 ## **2. Access Your API Dashboard**
 
