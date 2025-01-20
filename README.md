@@ -82,17 +82,23 @@ To enable automatic post logging for every session, follow these steps:
 
 ---
 
-## **Usage**
+## **Testing**
+
+### **Run the Plain Text Version**
+```bash
+PAM_USER="testuser" PAM_RHOST="127.0.0.1" PAM_TYPE="open_session" ./login_post_request_plain.sh
+```
+
+
+### **Prerequisite**
+Ensure OpenSSL is installed on the system to run the encrypted version:
 
 ### **Run the Encrypted Version**
 ```bash
 PAM_USER="testuser" PAM_RHOST="127.0.0.1" PAM_TYPE="open_session" ./login_post_request_encrypted.sh
 ```
 
-### **Run the Plain Text Version**
-```bash
-PAM_USER="testuser" PAM_RHOST="127.0.0.1" PAM_TYPE="open_session" ./login_post_request_plain.sh
-```
+
 
 ---
 
@@ -111,13 +117,13 @@ Wed Jan 20 12:00:01 UTC 2025: Transaction URL: https://stability.blockscout.com/
 ## **Customization**
 
 ### **Encryption Command**
-Modify the encryption algorithm or key in the encrypted script:
+You can use your own encryption method, in this example we are using open ssl aes 256:
 ```bash
 ENCRYPTION_COMMAND="openssl enc -aes-256-cbc -a -A -salt -pass pass:$PASS"
 ```
 
 ### **Event Data**
-Customize the event details (e.g., add/remove fields):
+Feel free to customize the fields you would like to logged (e.g., add/remove fields):
 ```bash
 EVENT="ServerID:$SERVERID, User: $USER, IP: $IP_ADDRESS, Service: $SERVICE, Timestamp: $TIMESTAMP, SessionType: $SESSION_TYPE"
 ```
