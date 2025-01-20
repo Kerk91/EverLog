@@ -13,7 +13,9 @@ After running the encrypted script, you can test decryption of the data as follo
 
 3. **Retrieve the Raw Input:**
    - Go to the **Data** section of the transaction.
+     
    - Select **Raw Input** and ensure the format is set to **UTF-8**.
+     ![Alt text](Rawinput_UTF-8.png)
    - Copy the entire input string.
 
 4. **Run the Decryption Command:**
